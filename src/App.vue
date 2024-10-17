@@ -1,16 +1,16 @@
 <template class="bg-black">
   <div>
-    <NavBar />
+    <Navbar />
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
+import NavBar from "./components/Navbar.vue";
 
 export default {
   name: "App",
   components: {
-    NavBar,
+    Navbar,
   },
 };
 </script>

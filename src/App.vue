@@ -1,9 +1,11 @@
 <template class="bg-black">
+  <div class="flex flex-col min-h-screen">
     <NavBar />
     <div class="p-6">
       <RouterView />
     </div>
     <Footer />
+  </div>
 </template>
 
 <script>

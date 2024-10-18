@@ -1,11 +1,16 @@
 <template>
   <div class="max-w-7xl mx-auto">
-    <h1>Experiences</h1>
+    <Construction/>
   </div>
 </template>
 
 <script>
+import Construction from '@/components/Construction.vue';
+
 export default {
   name: "Experiences",
+  components: {
+    Construction,
+  }
 };
 </script>

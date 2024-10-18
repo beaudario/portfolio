@@ -1,16 +1,20 @@
 <template class="bg-black">
-  <div>
-    <Navbar />
-  </div>
+    <NavBar />
+    <div class="p-6">
+      <RouterView />
+    </div>
+    <Footer />
 </template>
 
 <script>
-import NavBar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
   name: "App",
   components: {
-    Navbar,
+    NavBar,
+    Footer,
   },
 };
 </script>

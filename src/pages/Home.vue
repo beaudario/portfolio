@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto">
     <div class="flex items-center">
-      <h1 class="text-4xl pr-6 font-bold lg:text-6xl">Hi, i'm Dario</h1>
+      <h1 class="text-4xl pr-6 font-bold lg:text-6xl">Hi, <br> i'm Dario</h1>
       <img
         class="rounded-full w-20 lg:hidden"
         src="../assets/myself.jpg"
@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <h2 class="text-4xl font-bold text-center pt-12 pb-6">Showcase</h2>
+  <h2 class="text-4xl font-bold text-center pt-12 pb-6">Project showcase</h2>
   <h3 class="text-6xl font-bold text-center">T.B.C</h3>
 </template>
 

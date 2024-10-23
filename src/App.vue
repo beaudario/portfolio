@@ -1,7 +1,7 @@
 <template class="bg-black">
-  <div class="flex flex-col min-h-screen">
+  <div class="flex flex-col">
     <NavBar />
-    <div class="p-6">
+    <div class="py-24 px-12 min-h-screen">
       <RouterView />
     </div>
     <Footer />

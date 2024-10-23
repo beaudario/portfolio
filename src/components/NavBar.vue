@@ -8,6 +8,7 @@
       <div class="hidden md:flex md:gap-6 md:text-xl">
         <router-link to="/">Home</router-link>
         <router-link to="/projects">Projects</router-link>
+        <router-link to="/aboutme">About me</router-link>
         <router-link to="/experiences">Experiences</router-link>
       </div>
       <!--Hamburger to cross menu button for mobile-->
@@ -44,6 +45,9 @@
         >
         <router-link to="/experiences" @click="isOpen = false"
           >Experiences</router-link
+        >
+        <router-link to="/aboutme" @click="isOpen = false"
+          >About me</router-link
         >
       </nav>
     </transition>

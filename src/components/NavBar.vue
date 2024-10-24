@@ -2,10 +2,10 @@
   <!--Fix this whole mess because its to big for my liking, but thats for the future ;) cuz it's working for now-->
   <!--Desktop/Tablet navigation-->
 
-  <header class="bg-neutral-950 p-6">
+  <header class="bg-neutral-950 p-6 sm:px-12">
     <nav class="flex items-center justify-between max-w-7xl mx-auto">
       <a href="#"><img src="../assets/logo.svg" alt="Logo" /></a>
-      <div class="hidden md:flex md:gap-6 md:text-xl">
+      <div class="hidden gap-12 md:flex md:text-xl">
         <router-link to="/">Home</router-link>
         <router-link to="/projects">Projects</router-link>
         <router-link to="/aboutme">About me</router-link>

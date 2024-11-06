@@ -15,7 +15,7 @@
         developer at Saxion University of Applied Sciences. I enjoy working
         primarily in backend development, using languages like C# and Python.
         <br /><br />
-        Recently, I’ve been diving into lower-level languages like C++ and Rust,
+        Recently, I've been diving into lower-level languages like C++ and Rust,
         which has been both a challenging and rewarding journey. While these
         languages demand a deeper understanding of memory management and
         performance optimization, they provide valuable insights into how

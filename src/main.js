@@ -5,6 +5,9 @@ import router from "../router";
 import VueGtagPlugin, { config } from "vue-gtag";
 
 createApp(App)
-  .use(VueGtagPlugin, { config: { id: "G-SDPQXV8DCZ" } })
+  .use(VueGtagPlugin, {
+    config: { id: "G-SDPQXV8DCZ" },
+    router
+  })
   .use(router)
   .mount("#app");

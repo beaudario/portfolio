@@ -16,6 +16,9 @@ interface ButtonProps {
   external?: boolean;
   children: React.ReactNode;
   className?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
 export function Button({
@@ -24,6 +27,9 @@ export function Button({
   external,
   children,
   className,
+  type,
+  disabled,
+  onClick,
 }: ButtonProps) {
   const classes = cn(
     "inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-colors",
@@ -47,5 +53,9 @@ export function Button({
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button type={type} disabled={disabled} onClick={onClick} className={cn(classes, disabled && "opacity-50 cursor-not-allowed")}>
+      {children}
+    </button>
+  );
 }

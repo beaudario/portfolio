@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
+import { ContactForm } from "@/components/contact/contact-form";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -26,18 +27,7 @@ export default function ContactPage() {
         />
 
         <div className="mt-12 space-y-8">
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="flex items-center gap-4 rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/50"
-          >
-            <div className="rounded-lg bg-accent/10 p-3 text-accent">
-              <Mail size={24} />
-            </div>
-            <div>
-              <p className="text-sm text-muted">Email</p>
-              <p className="font-medium">{siteConfig.email}</p>
-            </div>
-          </a>
+          <ContactForm />
 
           <div>
             <h2 className="mb-4 text-xl font-semibold">Socials</h2>

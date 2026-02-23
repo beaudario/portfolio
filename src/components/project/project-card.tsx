@@ -7,7 +7,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group rounded-xl border border-border bg-surface transition-colors hover:border-accent/50 overflow-hidden"
+      className="group rounded-xl border border-border bg-surface transition-all hover:border-accent/50 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(232,151,58,0.08)] overflow-hidden"
     >
       {project.coverImage && (
         <div className="relative w-full h-48">

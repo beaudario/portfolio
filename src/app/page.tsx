@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
+import { ProjectCard } from "@/components/project/project-card";
 import { siteConfig } from "@/data/site";
 import { projects } from "@/data/projects";
 
@@ -19,8 +20,8 @@ export default function Home() {
         {/* Ambient glow */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full blur-[120px]"
-          style={{ background: "radial-gradient(circle, #e8973a 0%, transparent 65%)", opacity: 0.1 }}
+          className="pointer-events-none absolute -left-40 -top-20 h-[700px] w-[700px] rounded-full blur-[120px]"
+          style={{ background: "radial-gradient(circle, #e8973a 0%, transparent 65%)", opacity: 0.13 }}
         />
         <Container>
           <p className="mb-4 font-mono text-sm text-accent animate-fade-up">Hi, my name is</p>
@@ -31,7 +32,7 @@ export default function Home() {
             {siteConfig.name}
           </h1>
           <p
-            className="mt-4 max-w-xl text-lg text-muted sm:text-xl animate-fade-up"
+            className="mt-3 max-w-xl font-display text-xl font-light italic text-muted sm:text-2xl animate-fade-up"
             style={{ animationDelay: "160ms" }}
           >
             {siteConfig.tagline}
@@ -101,26 +102,7 @@ export default function Home() {
 
             <div className="grid gap-6 sm:grid-cols-2">
               {featured.map((project) => (
-                <Link
-                  key={project.slug}
-                  href={`/projects/${project.slug}`}
-                  className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/50"
-                >
-                  <h3 className="text-lg font-semibold group-hover:text-accent">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted">{project.tagline}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.techStack.slice(0, 4).map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full bg-background px-2.5 py-0.5 font-mono text-xs text-muted"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </Link>
+                <ProjectCard key={project.slug} project={project} />
               ))}
             </div>
 

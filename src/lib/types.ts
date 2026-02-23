@@ -19,8 +19,11 @@ export interface Project {
   description: string;
   techStack: string[];
   coverImage?: string;
+  images?: string[];
   liveUrl?: string;
   repoUrl?: string;
+  appStoreUrl?: string;
+  extraLinks?: { label: string; href: string }[];
   featured?: boolean;
   date: string;
 }

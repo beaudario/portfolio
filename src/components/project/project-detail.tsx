@@ -1,4 +1,5 @@
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 import type { Project } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,12 @@ export function ProjectDetail({ project }: { project: Project }) {
       <div className="mt-6 flex flex-wrap gap-3">
         {project.liveUrl && (
           <Button href={project.liveUrl} external>
-            <ExternalLink size={16} /> Live Demo
+            <ExternalLink size={16} /> Site
+          </Button>
+        )}
+        {project.appStoreUrl && (
+          <Button href={project.appStoreUrl} external>
+            <ExternalLink size={16} /> App Store
           </Button>
         )}
         {project.repoUrl && (
@@ -25,7 +31,24 @@ export function ProjectDetail({ project }: { project: Project }) {
             <Github size={16} /> Source Code
           </Button>
         )}
+        {project.extraLinks?.map((link) => (
+          <Button key={link.href} href={link.href} variant="secondary" external>
+            <ExternalLink size={16} /> {link.label}
+          </Button>
+        ))}
       </div>
+
+      {project.coverImage && (
+        <div className="mt-8 overflow-hidden rounded-xl">
+          <Image
+            src={project.coverImage}
+            alt={project.title}
+            width={1200}
+            height={675}
+            className="w-full object-cover"
+          />
+        </div>
+      )}
 
       <div className="mt-10">
         <h2 className="mb-4 text-xl font-semibold">About</h2>
@@ -42,6 +65,24 @@ export function ProjectDetail({ project }: { project: Project }) {
           ))}
         </div>
       </div>
+
+      {project.images && project.images.length > 0 && (
+        <div className="mt-10">
+          <h2 className="mb-4 text-xl font-semibold">Images</h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {project.images.map((src, i) => (
+              <div key={src} className="relative aspect-video overflow-hidden rounded-xl">
+                <Image
+                  src={src}
+                  alt={`${project.title} screenshot ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -26,18 +26,13 @@ export const siteConfig: SiteConfig = {
   socials: [
     {
       platform: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/beaudario",
       label: "GitHub",
     },
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/dario-douma-185307234/",
       label: "LinkedIn",
-    },
-    {
-      platform: "X",
-      url: "https://x.com",
-      label: "X (Twitter)",
     },
   ],
 };

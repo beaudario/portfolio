@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 const socialIcons: Record<string, React.ReactNode> = {
   GitHub: <Github size={20} />,
   LinkedIn: <Linkedin size={20} />,
-  X: <Twitter size={20} />,
 };
 
 export default function ContactPage() {

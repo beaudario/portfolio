@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { siteConfig } from "@/data/site";
@@ -8,7 +8,6 @@ import { projects } from "@/data/projects";
 const socialIcons: Record<string, React.ReactNode> = {
   GitHub: <Github size={20} />,
   LinkedIn: <Linkedin size={20} />,
-  X: <Twitter size={20} />,
 };
 
 export default function Home() {

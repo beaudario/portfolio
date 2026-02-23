@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
@@ -24,60 +25,85 @@ export default function Home() {
           style={{ background: "radial-gradient(circle, #e8973a 0%, transparent 65%)", opacity: 0.13 }}
         />
         <Container>
-          <p className="mb-4 font-mono text-sm text-accent animate-fade-up">Hi, my name is</p>
-          <h1
-            className="font-display text-4xl font-bold sm:text-5xl md:text-6xl text-balance animate-fade-up"
-            style={{ animationDelay: "80ms" }}
-          >
-            {siteConfig.name}
-          </h1>
-          <p
-            className="mt-3 max-w-xl font-display text-xl font-light italic text-muted sm:text-2xl animate-fade-up"
-            style={{ animationDelay: "160ms" }}
-          >
-            {siteConfig.tagline}
-          </p>
-          <p
-            className="mt-6 max-w-lg text-muted animate-fade-up"
-            style={{ animationDelay: "240ms" }}
-          >
-            {siteConfig.bio}
-          </p>
-
-          <div
-            className="mt-8 flex items-center gap-4 animate-fade-up"
-            style={{ animationDelay: "320ms" }}
-          >
-            {siteConfig.socials.map((social) => (
-              <a
-                key={social.platform}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="rounded-lg border border-border p-2.5 text-muted transition-colors hover:border-accent hover:text-accent"
+          <div className="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center">
+            {/* Left: text content */}
+            <div>
+              <p className="mb-4 font-mono text-sm text-accent animate-fade-up">Hi, my name is</p>
+              <h1
+                className="font-display text-4xl font-bold sm:text-5xl md:text-6xl text-balance animate-fade-up"
+                style={{ animationDelay: "80ms" }}
               >
-                {socialIcons[social.platform] ?? social.label}
-              </a>
-            ))}
-          </div>
+                {siteConfig.name}
+              </h1>
+              <p
+                className="mt-3 font-display text-xl font-light italic text-muted sm:text-2xl animate-fade-up"
+                style={{ animationDelay: "160ms" }}
+              >
+                {siteConfig.tagline}
+              </p>
+              <p
+                className="mt-6 text-muted animate-fade-up"
+                style={{ animationDelay: "240ms" }}
+              >
+                {siteConfig.bio}
+              </p>
 
-          <div
-            className="mt-10 flex flex-wrap gap-4 animate-fade-up"
-            style={{ animationDelay: "420ms" }}
-          >
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
-            >
-              View Projects <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="/experiences"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface"
-            >
-              My Experience
-            </Link>
+              <div
+                className="mt-8 flex items-center gap-4 animate-fade-up"
+                style={{ animationDelay: "320ms" }}
+              >
+                {siteConfig.socials.map((social) => (
+                  <a
+                    key={social.platform}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="rounded-lg border border-border p-2.5 text-muted transition-colors hover:border-accent hover:text-accent"
+                  >
+                    {socialIcons[social.platform] ?? social.label}
+                  </a>
+                ))}
+              </div>
+
+              <div
+                className="mt-10 flex flex-wrap gap-4 animate-fade-up"
+                style={{ animationDelay: "420ms" }}
+              >
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+                >
+                  View Projects <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="/experiences"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface"
+                >
+                  My Experience
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: photo */}
+            <div className="flex justify-center md:justify-end animate-fade-up" style={{ animationDelay: "300ms" }}>
+              <div className="relative">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-4 rounded-3xl blur-2xl"
+                  style={{ background: "radial-gradient(circle, #e8973a 0%, transparent 70%)", opacity: 0.19 }}
+                />
+                <div className="relative h-[380px] w-[260px] overflow-hidden rounded-2xl border border-border transition-transform duration-500 hover:scale-[1.02]">
+                  <Image
+                    src="/images/me.jpg"
+                    alt="Dario"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>

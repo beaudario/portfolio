@@ -28,7 +28,7 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
   return (
     <div className="rounded-xl border border-border bg-surface p-6">
       <div className="mb-3 flex items-center gap-2 text-xs text-muted">
-        <span className="text-accent">{typeIcons[type]}</span>
+        <span className="text-accent" aria-hidden="true">{typeIcons[type]}</span>
         <span>{typeLabels[type]}</span>
         <span className="text-border">|</span>
         <span>

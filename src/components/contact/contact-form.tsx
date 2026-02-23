@@ -59,8 +59,9 @@ export function ContactForm() {
           name="name"
           type="text"
           required
+          autoComplete="name"
           placeholder="Your name"
-          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted focus:border-accent/50"
+          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm transition-colors placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent"
         />
       </div>
 
@@ -73,8 +74,9 @@ export function ContactForm() {
           name="email"
           type="email"
           required
+          autoComplete="email"
           placeholder="your@email.com"
-          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted focus:border-accent/50"
+          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm transition-colors placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent"
         />
       </div>
 
@@ -88,12 +90,12 @@ export function ContactForm() {
           required
           rows={5}
           placeholder="What's on your mind?"
-          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted focus:border-accent/50 resize-none"
+          className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm transition-colors placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent resize-none"
         />
       </div>
 
       {state === "error" && (
-        <p className="text-sm text-red-500">
+        <p role="alert" className="text-sm text-red-500">
           Something went wrong. Please try again or reach out via socials.
         </p>
       )}

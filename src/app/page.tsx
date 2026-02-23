@@ -18,7 +18,7 @@ export default function Home() {
       <Section className="py-24 md:py-32">
         <Container>
           <p className="mb-4 font-mono text-sm text-accent">Hi, my name is</p>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-balance">
             {siteConfig.name}
           </h1>
           <p className="mt-4 max-w-xl text-lg text-muted sm:text-xl">
@@ -66,7 +66,7 @@ export default function Home() {
                 <p className="mb-2 font-mono text-sm text-accent">
                   Featured Work
                 </p>
-                <h2 className="text-2xl font-bold sm:text-3xl">Projects</h2>
+                <h2 className="text-2xl font-bold sm:text-3xl text-balance">Projects</h2>
               </div>
               <Link
                 href="/projects"

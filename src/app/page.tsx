@@ -33,7 +33,7 @@ export default function Home() {
                 className="font-display text-4xl font-bold sm:text-5xl md:text-6xl text-balance animate-fade-up"
                 style={{ animationDelay: "80ms" }}
               >
-                {siteConfig.name}
+                {siteConfig.fullName}
               </h1>
               <p
                 className="mt-3 font-display text-xl font-light italic text-muted sm:text-2xl animate-fade-up"

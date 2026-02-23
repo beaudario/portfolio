@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { siteConfig } from "@/data/site";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -22,9 +23,58 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dario — Software Engineer",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    template: "%s — Dario Douma",
+    default: "Dario Douma — Software Engineer",
+  },
   description:
-    "Personal portfolio of Dario — software engineer and builder.",
+    "Personal portfolio of Dario Douma — software engineer and builder specializing in C#, .NET, Unity, and mobile development.",
+  keywords: [
+    "Dario Douma",
+    "software engineer",
+    "portfolio",
+    "C#",
+    ".NET",
+    "Unity",
+    "augmented reality",
+    "mobile development",
+  ],
+  authors: [{ name: "Dario Douma", url: siteConfig.url }],
+  creator: "Dario Douma",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    siteName: "Dario Douma",
+    title: "Dario Douma — Software Engineer",
+    description:
+      "Personal portfolio of Dario Douma — software engineer and builder specializing in C#, .NET, Unity, and mobile development.",
+    images: [
+      {
+        url: "/images/me.jpg",
+        width: 600,
+        height: 800,
+        alt: "Dario Douma",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dario Douma — Software Engineer",
+    description:
+      "Personal portfolio of Dario Douma — software engineer and builder.",
+    images: ["/images/me.jpg"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Dario Douma",
+  url: siteConfig.url,
+  jobTitle: "Software Engineer",
+  sameAs: siteConfig.socials.map((s) => s.url),
 };
 
 export default function RootLayout({
@@ -34,6 +84,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${plusJakartaSans.variable} ${fraunces.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >

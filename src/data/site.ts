@@ -2,6 +2,8 @@ import { SiteConfig } from "@/lib/types";
 
 export const siteConfig: SiteConfig = {
   name: "Dario",
+  fullName: "Dario Douma",
+  url: "https://dariodouma.com",
   tagline: "Software Engineer & Builder",
   bio: "I'm a software engineer passionate about building great products. I love working across the stack, from crafting clean user interfaces to designing robust backend systems.",
   skills: [

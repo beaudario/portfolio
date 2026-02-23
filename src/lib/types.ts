@@ -36,6 +36,8 @@ export interface Social {
 
 export interface SiteConfig {
   name: string;
+  fullName: string;
+  url: string;
   tagline: string;
   bio: string;
   skills: string[];

@@ -5,8 +5,9 @@ import { ExperienceTimeline } from "@/components/experience/experience-timeline"
 import { experiences } from "@/data/experiences";
 
 export const metadata: Metadata = {
-  title: "Experiences — Dario",
-  description: "Work experience, education, and certifications.",
+  title: "Experiences",
+  description:
+    "Dario Douma's work experience, education, and certifications in software engineering.",
 };
 
 export default function ExperiencesPage() {

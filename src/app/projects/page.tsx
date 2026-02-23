@@ -6,8 +6,9 @@ import { ProjectCard } from "@/components/project/project-card";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects — Dario",
-  description: "A collection of projects I've built.",
+  title: "Projects",
+  description:
+    "Projects built by Dario Douma — from AR mobile apps to full-stack web applications.",
 };
 
 export default function ProjectsPage() {

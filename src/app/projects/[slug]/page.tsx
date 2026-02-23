@@ -21,8 +21,15 @@ export async function generateMetadata({
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} — Dario`,
-    description: project.tagline,
+    title: project.title,
+    description: `${project.tagline} — A project by Dario Douma.`,
+    openGraph: {
+      title: project.title,
+      description: project.tagline,
+      ...(project.coverImage && {
+        images: [{ url: project.coverImage, alt: project.title }],
+      }),
+    },
   };
 }
 

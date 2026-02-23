@@ -7,8 +7,9 @@ import { ContactForm } from "@/components/contact/contact-form";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Dario",
-  description: "Get in touch with me.",
+  title: "Contact",
+  description:
+    "Get in touch with Dario Douma for opportunities, collaborations, or just to say hi.",
 };
 
 const socialIcons: Record<string, React.ReactNode> = {

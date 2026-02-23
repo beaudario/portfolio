@@ -12,7 +12,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       </Button>
 
       <p className="mb-2 font-mono text-sm text-accent">{project.date}</p>
-      <h1 className="text-3xl font-bold sm:text-4xl">{project.title}</h1>
+      <h1 className="font-display text-3xl font-bold sm:text-4xl">{project.title}</h1>
       <p className="mt-2 text-lg text-muted">{project.tagline}</p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -51,12 +51,12 @@ export function ProjectDetail({ project }: { project: Project }) {
       )}
 
       <div className="mt-10">
-        <h2 className="mb-4 text-xl font-semibold">About</h2>
+        <h2 className="font-display mb-4 text-xl font-semibold">About</h2>
         <p className="leading-relaxed text-muted">{project.description}</p>
       </div>
 
       <div className="mt-10">
-        <h2 className="mb-4 text-xl font-semibold">Tech Stack</h2>
+        <h2 className="font-display mb-4 text-xl font-semibold">Tech Stack</h2>
         <div className="flex flex-wrap gap-2">
           {project.techStack.map((tech) => (
             <Badge key={tech} className="border border-border bg-surface px-3 py-1 text-sm">
@@ -68,7 +68,7 @@ export function ProjectDetail({ project }: { project: Project }) {
 
       {project.images && project.images.length > 0 && (
         <div className="mt-10">
-          <h2 className="mb-4 text-xl font-semibold">Images</h2>
+          <h2 className="font-display mb-4 text-xl font-semibold">Images</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {project.images.map((src, i) => (
               <div key={src} className="relative aspect-video overflow-hidden rounded-xl">

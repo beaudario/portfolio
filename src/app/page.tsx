@@ -15,18 +15,38 @@ export default function Home() {
 
   return (
     <>
-      <Section className="py-24 md:py-32">
+      <Section className="relative overflow-hidden py-24 md:py-32">
+        {/* Ambient glow */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full blur-[120px]"
+          style={{ background: "radial-gradient(circle, #e8973a 0%, transparent 65%)", opacity: 0.1 }}
+        />
         <Container>
-          <p className="mb-4 font-mono text-sm text-accent">Hi, my name is</p>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-balance">
+          <p className="mb-4 font-mono text-sm text-accent animate-fade-up">Hi, my name is</p>
+          <h1
+            className="font-display text-4xl font-bold sm:text-5xl md:text-6xl text-balance animate-fade-up"
+            style={{ animationDelay: "80ms" }}
+          >
             {siteConfig.name}
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-muted sm:text-xl">
+          <p
+            className="mt-4 max-w-xl text-lg text-muted sm:text-xl animate-fade-up"
+            style={{ animationDelay: "160ms" }}
+          >
             {siteConfig.tagline}
           </p>
-          <p className="mt-6 max-w-lg text-muted">{siteConfig.bio}</p>
+          <p
+            className="mt-6 max-w-lg text-muted animate-fade-up"
+            style={{ animationDelay: "240ms" }}
+          >
+            {siteConfig.bio}
+          </p>
 
-          <div className="mt-8 flex items-center gap-4">
+          <div
+            className="mt-8 flex items-center gap-4 animate-fade-up"
+            style={{ animationDelay: "320ms" }}
+          >
             {siteConfig.socials.map((social) => (
               <a
                 key={social.platform}
@@ -41,7 +61,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div
+            className="mt-10 flex flex-wrap gap-4 animate-fade-up"
+            style={{ animationDelay: "420ms" }}
+          >
             <Link
               href="/projects"
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
@@ -66,7 +89,7 @@ export default function Home() {
                 <p className="mb-2 font-mono text-sm text-accent">
                   Featured Work
                 </p>
-                <h2 className="text-2xl font-bold sm:text-3xl text-balance">Projects</h2>
+                <h2 className="font-display text-2xl font-bold sm:text-3xl text-balance">Projects</h2>
               </div>
               <Link
                 href="/projects"

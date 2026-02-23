@@ -30,7 +30,7 @@ export default function ContactPage() {
           <ContactForm />
 
           <div>
-            <h2 className="mb-4 text-xl font-semibold">Socials</h2>
+            <h2 className="font-display mb-4 text-xl font-semibold">Socials</h2>
             <div className="grid gap-4 sm:grid-cols-3">
               {siteConfig.socials.map((social) => (
                 <a

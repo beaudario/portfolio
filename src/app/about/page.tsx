@@ -18,12 +18,12 @@ export default function AboutPage() {
 
         <div className="mt-12 space-y-10">
           <div>
-            <h2 className="mb-4 text-xl font-semibold">Bio</h2>
+            <h2 className="font-display mb-4 text-xl font-semibold">Bio</h2>
             <p className="leading-relaxed text-muted">{siteConfig.bio}</p>
           </div>
 
           <div>
-            <h2 className="mb-4 text-xl font-semibold">Skills</h2>
+            <h2 className="font-display mb-4 text-xl font-semibold">Skills</h2>
             <div className="flex flex-wrap gap-2">
               {siteConfig.skills.map((skill) => (
                 <Badge
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="mb-4 text-xl font-semibold">Interests</h2>
+            <h2 className="font-display mb-4 text-xl font-semibold">Interests</h2>
             <div className="flex flex-wrap gap-2">
               {siteConfig.interests.map((interest) => (
                 <Badge

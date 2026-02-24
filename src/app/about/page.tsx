@@ -9,7 +9,7 @@ import { siteConfig } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn more about Dario Douma — his skills, interests, and background as a software engineer.",
+    "Learn more about Dario Douma - his skills, interests, and background as a software engineer.",
 };
 
 export default function AboutPage() {

@@ -24,7 +24,7 @@ export default function ContactPage() {
         <Heading
           label="Get in Touch"
           title="Contact"
-          description="Feel free to reach out — I'm always open to new opportunities and conversations."
+          description="Feel free to reach out - I'm always open to new opportunities and conversations."
         />
 
         <div className="mt-12 space-y-8">

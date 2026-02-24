@@ -8,7 +8,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Projects built by Dario Douma — from AR mobile apps to full-stack web applications.",
+    "Projects built by Dario Douma - from AR mobile apps to full-stack web applications.",
 };
 
 export default function ProjectsPage() {

@@ -25,11 +25,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    template: "%s — Dario Douma",
-    default: "Dario Douma — Software Engineer",
+    template: "%s - Dario Douma",
+    default: "Dario Douma - Software Engineer",
   },
   description:
-    "Personal portfolio of Dario Douma — software engineer and builder specializing in C#, .NET, Unity, and mobile development.",
+    "Personal portfolio of Dario Douma - software engineer and builder specializing in C#, .NET, Unity, and mobile development.",
   keywords: [
     "Dario Douma",
     "software engineer",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: "Dario Douma",
-    title: "Dario Douma — Software Engineer",
+    title: "Dario Douma - Software Engineer",
     description:
-      "Personal portfolio of Dario Douma — software engineer and builder specializing in C#, .NET, Unity, and mobile development.",
+      "Personal portfolio of Dario Douma - software engineer and builder specializing in C#, .NET, Unity, and mobile development.",
     images: [
       {
         url: "/images/me.jpg",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dario Douma — Software Engineer",
+    title: "Dario Douma - Software Engineer",
     description:
-      "Personal portfolio of Dario Douma — software engineer and builder.",
+      "Personal portfolio of Dario Douma - software engineer and builder.",
     images: ["/images/me.jpg"],
   },
 };
